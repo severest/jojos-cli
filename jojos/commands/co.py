@@ -31,13 +31,14 @@ class Co(Base):
                 raise
             cache = {}
 
-        branch_name = cache.get(self.options['<pull_request_id>'])
+        pr_id = self.options['<pull_request_id>']
+        branch_name = cache.get(pr_id)
         if branch_name is None:
             gh = Github(self.find_oauth_token())
             repo = gh.get_repo('7Geese/7Geese')
-            pull = repo.get_pull(int(self.options['<pull_request_id>']))
+            pull = repo.get_pull(int(pr_id))
             branch_name = pull.head.ref
-            cache[self.options['<pull_request_id>']] = branch_name
+            cache[pr_id] = branch_name
             with open(cache_file, 'w') as f:
                 json.dump(cache, f, indent=4)
 
