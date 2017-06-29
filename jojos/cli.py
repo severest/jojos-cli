@@ -3,6 +3,8 @@ jojos
 
 Usage:
   jojos hello
+  jojos pr <issue_id>
+  jojos co <pull_request_id>
   jojos -h | --help
   jojos --version
 
@@ -12,6 +14,7 @@ Options:
 
 Examples:
   jojos hello
+  jojos pr
 
 Help:
   For help using this tool, please open an issue on the Github repository:
