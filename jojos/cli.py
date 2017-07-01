@@ -5,6 +5,7 @@ Usage:
   jojos hello
   jojos pr <issue_id>
   jojos co <pull_request_id>
+  jojos open
   jojos -h | --help
   jojos --version
 
@@ -15,6 +16,7 @@ Options:
 Examples:
   jojos hello
   jojos pr
+  jojos open
 
 Help:
   For help using this tool, please open an issue on the Github repository:
@@ -43,3 +45,6 @@ def main():
             command = [command[1] for command in jojos.commands if command[0] != 'Base'][0]
             command = command(options)
             command.run()
+            break
+    else:
+        print('Could not find command')

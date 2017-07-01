@@ -1,2 +1,3 @@
 .DS_Store
 *.pyc
+jojos_cli.egg-info/
