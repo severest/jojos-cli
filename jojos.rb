@@ -2,7 +2,7 @@ class Jojos < Formula
     include Language::Python::Virtualenv
     desc "jojojo"
     homepage "https://github.com/severest/jojos-cli"
-    url "https://github.com/severest/jojos-cli/archive/0.2.4.tar.gz"
+    url "https://github.com/severest/jojos-cli/archive/0.2.5.tar.gz"
 
     resource "docopt" do
         url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
@@ -35,13 +35,18 @@ class Jojos < Formula
     end
 
     resource "urllib3" do
-        url "https://pypi.python.org/packages/96/d9/40e4e515d3e17ed0adbbde1078e8518f8c4e3628496b56eb8f026a02b9e4/urllib3-1.21.1.tar.gz"
+        url "https://files.pythonhosted.org/packages/96/d9/40e4e515d3e17ed0adbbde1078e8518f8c4e3628496b56eb8f026a02b9e4/urllib3-1.21.1.tar.gz"
         sha256 "b14486978518ca0901a76ba973d7821047409d7f726f22156b24e83fd71382a5"
     end
 
     resource "chardet" do
-        url "https://pypi.python.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz"
-        sha256 "aaaa"
+        url "https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz"
+        sha256 "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
+    end
+
+    resource "certifi" do
+        url "https://pypi.python.org/packages/dd/0e/1e3b58c861d40a9ca2d7ea4ccf47271d4456ae4294c5998ad817bd1b4396/certifi-2017.4.17.tar.gz"
+        sha256 "qq"
     end
 
     def install
