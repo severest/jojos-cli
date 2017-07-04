@@ -2,7 +2,7 @@ class Jojos < Formula
     include Language::Python::Virtualenv
     desc "jojojo"
     homepage "https://github.com/severest/jojos-cli"
-    url "https://github.com/severest/jojos-cli/archive/0.2.1.tar.gz"
+    url "https://github.com/severest/jojos-cli/archive/0.2.2.tar.gz"
 
     resource "docopt" do
         url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
@@ -24,9 +24,14 @@ class Jojos < Formula
         sha256 "1179f0bff86463b5308ee5f7aff1c350e1f38139d62a723e16fb2c557d1c795f"
     end
 
+    resource "requests" do
+        url "https://files.pythonhosted.org/packages/2c/b5/2b6e8ef8dd18203b6399e9f28c7d54f6de7b7549853fe36d575bd31e29a7/requests-2.18.1.tar.gz"
+        sha256 "jjojojo"
+    end
+
     resource "requests-toolbelt" do
         url "https://files.pythonhosted.org/packages/86/f9/e80fa23edca6c554f1994040064760c12b51daff54b55f9e379e899cd3d4/requests-toolbelt-0.8.0.tar.gz"
-        sha256 "wee"
+        sha256 "f6a531936c6fa4c6cfce1b9c10d5c4f498d16528d2a54a22ca00011205a187b5"
     end
 
     def install
