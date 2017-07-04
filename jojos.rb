@@ -2,7 +2,7 @@ class Jojos < Formula
     include Language::Python::Virtualenv
     desc "jojojo"
     homepage "https://github.com/severest/jojos-cli"
-    url "https://github.com/severest/jojos-cli/archive/0.2.5.tar.gz"
+    url "https://github.com/severest/jojos-cli/archive/0.3.0.tar.gz"
 
     resource "docopt" do
         url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
@@ -45,8 +45,13 @@ class Jojos < Formula
     end
 
     resource "certifi" do
-        url "https://pypi.python.org/packages/dd/0e/1e3b58c861d40a9ca2d7ea4ccf47271d4456ae4294c5998ad817bd1b4396/certifi-2017.4.17.tar.gz"
-        sha256 "qq"
+        url "https://files.pythonhosted.org/packages/dd/0e/1e3b58c861d40a9ca2d7ea4ccf47271d4456ae4294c5998ad817bd1b4396/certifi-2017.4.17.tar.gz"
+        sha256 "f7527ebf7461582ce95f7a9e03dd141ce810d40590834f4ec20cddd54234c10a"
+    end
+
+    resource "idna" do
+        url "https://files.pythonhosted.org/packages/d8/82/28a51052215014efc07feac7330ed758702fc0581347098a81699b5281cb/idna-2.5.tar.gz"
+        sha256 "3cb5ce08046c4e3a560fc02f138d0ac63e00f8ce5901a56b32ec8b7994082aab"
     end
 
     def install
