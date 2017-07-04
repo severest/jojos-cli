@@ -29,6 +29,7 @@ class Pr(Base):
                 continue
             break
 
+        print(check_output(['git', 'pull']))
         print(check_output(['git', 'checkout', '-b', new_branch]))
         print(check_output(['git', 'commit', '-m', 'Connect to issue #{}\n\n[ci skip]'.format(issue_id), '--allow-empty']))
         print(check_output(['git', 'push', '-u', 'origin', new_branch]))
