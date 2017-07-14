@@ -2,7 +2,7 @@ class Jojos < Formula
     include Language::Python::Virtualenv
     desc "jojojo"
     homepage "https://github.com/severest/jojos-cli"
-    url "https://github.com/severest/jojos-cli/archive/0.3.0.tar.gz"
+    url "https://github.com/severest/jojos-cli/archive/0.3.1.tar.gz"
 
     resource "docopt" do
         url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
