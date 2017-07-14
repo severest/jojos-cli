@@ -1,4 +1,5 @@
 """Simple util to open a URL in the browser."""
+# coding=utf-8
 
 from subprocess import check_output
 
