@@ -1,15 +1,13 @@
 """The open command."""
-from __future__ import absolute_import
+from __future__ import absolute_import, division, print_function, unicode_literals
 
+from subprocess import check_output
 from urllib import quote_plus
 
 import requests
-from subprocess import check_output
-from requests_toolbelt.utils.dump import dump_all
 
-from .base import Base
 from ..utils.github import find_oauth_token
-from ..utils.open_pr_url import open_pr_url
+from .base import Base
 
 
 class Open(Base):
