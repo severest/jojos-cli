@@ -58,7 +58,10 @@ setup(
     keywords='cli',
     packages=find_packages(exclude=['docs', 'tests*']),
     install_requires=[
+        'PyGithub',
         'docopt',
+        'pyyaml',
+        'requests',
         'six',
     ],
     extras_require={
