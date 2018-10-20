@@ -1,8 +1,9 @@
 """The pr command."""
-import re
 from itertools import count
 from pprint import pprint
 from subprocess import check_output
+
+from six.moves import input
 
 from .base import Base
 
@@ -10,7 +11,9 @@ _cookies = None
 
 
 class Pr(Base):
-    """Create pull-request"""
+    """
+    Create pull-request
+    """
 
     def run(self):
         issue_id = self.options['<issue_id>']
@@ -33,7 +36,6 @@ class Pr(Base):
         print(check_output(['git', 'checkout', '-b', new_branch]))
         print(check_output(['git', 'commit', '-m', 'Connect to issue #{}\n\n[ci skip]'.format(issue_id), '--allow-empty']))
         print(check_output(['git', 'push', '-u', 'origin', new_branch]))
-        pr_title = raw_input('Enter PR title: ')
+        pr_title = input('Enter PR title: ')
         pr_url = check_output(['hub', 'pull-request', '-m', pr_title]).strip()
-        pr_id = re.search(r'/pull/(\d+)', pr_url).group(1)
         check_output(['open', pr_url])

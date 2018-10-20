@@ -1,5 +1,5 @@
 """Packaging settings."""
-
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 from codecs import open
 from os.path import abspath, dirname, join
@@ -33,15 +33,15 @@ class RunTests(Command):
 
 
 setup(
-    name = 'jojos-cli',
-    version = __version__,
-    description = 'A jojo command line program in Python.',
-    long_description = long_description,
-    url = 'https://github.com/severest/jojos-cli',
-    author = 'Sean Everest',
-    author_email = 'me@seaneverest.com',
-    license = 'UNLICENSE',
-    classifiers = [
+    name='jojos-cli',
+    version=__version__,
+    description='A jojo command line program in Python.',
+    long_description=long_description,
+    url='https://github.com/severest/jojos-cli',
+    author='Sean Everest',
+    author_email='me@seaneverest.com',
+    license='UNLICENSE',
+    classifiers=[
         'Intended Audience :: Developers',
         'Topic :: Utilities',
         'License :: Public Domain',
@@ -55,16 +55,19 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    keywords = 'cli',
-    packages = find_packages(exclude=['docs', 'tests*']),
-    install_requires = ['docopt'],
-    extras_require = {
+    keywords='cli',
+    packages=find_packages(exclude=['docs', 'tests*']),
+    install_requires=[
+        'docopt',
+        'six',
+    ],
+    extras_require={
         'test': ['coverage', 'pytest', 'pytest-cov'],
     },
-    entry_points = {
+    entry_points={
         'console_scripts': [
             'jojos=jojos.cli:main',
         ],
     },
-    cmdclass = {'test': RunTests},
+    cmdclass={'test': RunTests},
 )

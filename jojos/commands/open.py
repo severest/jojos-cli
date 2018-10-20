@@ -2,9 +2,9 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 from subprocess import check_output
-from urllib import quote_plus
 
 import requests
+from six.moves.urllib.parse import quote_plus
 
 from ..utils.github import find_oauth_token
 from .base import Base
