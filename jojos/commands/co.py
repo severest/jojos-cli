@@ -45,7 +45,7 @@ class Co(Base):
                 sys.exit(1)
             branch_name = pull.head.ref
             cache[pr_id_str] = branch_name
-            with open(cache_file, b'w') as f:
+            with open(cache_file, 'w') as f:
                 json.dump(cache, f, indent=4)
 
         print(check_output(['git', 'checkout', branch_name]))
