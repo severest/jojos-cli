@@ -7,4 +7,7 @@ jojos-cli
 Usage
 -------
 
-Welp
+To test locally without installing through brew, run:
+```bash
+python -m jojos
+```
