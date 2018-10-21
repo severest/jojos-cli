@@ -21,6 +21,8 @@ class Merge(Base):
         retcode = call(['git', 'merge', '--squash', '--no-edit', 'origin/{}'.format(pr_data['head']['ref'])])
         if retcode != 0:
             exit(retcode)
-        retcode = call(['git', 'commit', '-m', '{} (#{})'.format(pr_data['title'], pr_id)])
+        no_verify = self.options['-n']
+        no_verify_args = ['-n'] if no_verify else []
+        retcode = call(['git', 'commit'] + no_verify_args + ['-m', '{} (#{})'.format(pr_data['title'], pr_id)])
         if retcode != 0:
             exit(retcode)
