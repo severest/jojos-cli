@@ -6,7 +6,7 @@ Usage:
   jojos pr <issue_id>
   jojos co <pull_request_id>
   jojos open
-  jojos merge <pull_request_id>
+  jojos merge [-n] <pull_request_id>
   jojos -h | --help
   jojos --version
 

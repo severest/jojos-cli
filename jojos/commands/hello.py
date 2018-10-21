@@ -1,5 +1,6 @@
 """The hello command."""
-
+# coding=utf-8
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 from json import dumps
 
@@ -11,4 +12,5 @@ class Hello(Base):
 
     def run(self):
         print('Hello, world!')
-        print('You supplied the following options:', dumps(self.options, indent=2, sort_keys=True))
+        print('You supplied the following options:')
+        print(dumps(self.options, indent=2, sort_keys=True))
